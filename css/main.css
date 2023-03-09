@@ -90,7 +90,7 @@ img {
   align-items: center;
   justify-content: right;
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 650px) {
   .nav-menu {
     display: none;
   }
