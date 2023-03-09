@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./css/main.min.css">
 
   <title>CV</title>
 </head>
@@ -138,6 +138,37 @@
           display the name of the city on the result page and the current
           temperature of the city
         </p>
+        <pre class="coding">
+                    <code>
+            function search(event) {
+            event.preventDefault();
+            let cityElement = document.querySelector("#city");
+            let cityInput = document.querySelector("#city-input");
+            let cityName = cityInput.value; cityElement.innerHTML = cityName;
+
+            showWeatherForCity(cityName);
+           }
+            function showTemperature(response) {
+            let temperature = Math.round(response.data.main.temp); let city =
+            response.data.name;
+
+            let message = `Today in ${city}`; let h1 =
+            document.querySelector("h1");
+            h1.innerHTML = message;
+
+            let currentTempElement =
+            document.querySelector("#temperature");
+            currentTempElement.innerHTML= temperature;
+            }
+
+            function getWeatherForCity(cityName) {
+            let apiKey = "b5fdbe7ffc620c1e309259a98257fdc7"; let units = "metric";
+             let apiUrl =
+            `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=${units}`;
+            return axios.get(apiUrl);
+            }
+
+        </code>
         <section class="experience">
           <h2 class="title">Experience</h2>
           <a class="experience__link description" href="http://momentums--papaya-tanuki-cdc4b7.netlify.app/">Project

@@ -1,0 +1,55 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+pre,
+ol,
+li {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+body {
+  font-family: $font-accept;
+  color: $color-primary-black;
+  background-color: $font-accept;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
+}
+img {
+  display: block;
+}
+.section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.title {
+  font-family: $font-primary;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.8;
+  text-align: center;
+  color: #fe9013;
+}
+.description {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.8;
+}

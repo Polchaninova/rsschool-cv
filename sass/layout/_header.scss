@@ -1,0 +1,35 @@
+.nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+
+  @media screen and (max-width: 650px) {
+    display: none;
+  }
+}
+.nav-menu__item:not(:last-child) {
+  margin-right: 50px;
+}
+.nav-menu__link {
+  display: block;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: $color-link-header;
+  transition: color 250ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  &:hover,
+  &:focus {
+    color: $color-accept-tomato;
+  }
+}
+.nav-menu__link.current {
+  color: $color-accept-tomato;
+}
+
+.header{
+background-color: $color-head-yellow-light;
+}
