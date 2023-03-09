@@ -57,35 +57,23 @@ Currently, I came to the RS Schools Course «JavaScript/Front-end. Stage 0» to 
 
 ## **Code example:**
 
-### _**Project Weather App :** When a user searches for a city (example: Kharkiv), it should display the name of the city on the result page and the current temperature of the city._
+### _**Project Momentum:** Times and calendar. The time is displayed in 24-hour format, for example: 21:01:00._
 
 ```
-function search(event) {
-  event.preventDefault();
-  let cityElement = document.querySelector("#city");
-  let cityInput = document.querySelector("#city-input");
-  let cityName = cityInput.value;
-  cityElement.innerHTML = cityName;
-  showWeatherForCity(cityName);
-}
-function showTemperature(response) {
-  let temperature = Math.round(response.data.main.temp);
-  let city = response.data.name;
-  let message = `Today in ${city}`;
-  let h1 = document.querySelector("h1");
-  h1.innerHTML = message;
-  console.log(h1);
-  console.log(message);
+import { showGreeting } from "./showGreeting";
+import { showDate } from "./showDate";
 
-  let currentTempElement = document.querySelector("#temperature");
-  currentTempElement.innerHTML = temperature;
-}
+const time = document.querySelector(".time");
+// console.log(time);
 
-function getWeatherForCity(cityName) {
-  let apiKey = "b5fdbe7ffc620c1e309259a98257fdc7";
-  let units = "metric";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=${units}`;
-  return axios.get(apiUrl);
+export function showTime() {
+  const date = new Date();
+
+  const currentTime = date.toLocaleTimeString();
+  // console.log(currentTime);
+  time.textContent = currentTime;
+  showGreeting();
+  showDate();
 }
 ```
 
