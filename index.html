@@ -195,8 +195,10 @@
 
          </pre>
           <section class="experience">
-            <h2 class="title">Experience:</h2>
-            <a href="http://momentums--papaya-tanuki-cdc4b7.netlify.app/"
+            <h2 class="title">Experience</h2>
+            <a
+              class="experience__link description"
+              href="http://momentums--papaya-tanuki-cdc4b7.netlify.app/"
               >Project Momentum</a
             >
           </section>
@@ -209,7 +211,7 @@
             <li class="languages__knowledge description">
               English - A1 (Elementary)
               <a
-                class="languages__link-en"
+                class="languages__link-en experience__link description"
                 href="https://training.epam.ua/Inbox#!/Notifications?lang=ua"
                 >English level (in process)</a
               >
@@ -222,35 +224,65 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
-      <div class="container">
-        <a
-          class="footer__link-logo"
-          href="https://app.rs.school"
-          target="_blank"
-        >
-          <img
-            class="footer__logo-img"
-            src="./image/logo.jpg"
-            alt="logo"
-            width="26px"
-            height="26px"
-        /></a>
-        <ul>
-          <li>
-            <a class="footer__link" href="https://github.com/Polchaninova">
-              <svg class="footer__logo-svg">
-                <use
-                  href="./image/sprite.svg#icon-github"
-                  width="26px"
-                  height="26px"
-                ></use>
+    <footer class="footer section">
+      <div class="container flex">
+        <ul class="footer__menu">
+          <li class="footer__item">
+            <a
+              class="footer__link"
+              href="https://app.rs.school"
+              target="_blank"
+            >
+              <svg class="footer__logo-svg logo">
+                <use href="./image/sprite.svg#icon-logo-svg"></use>
               </svg>
             </a>
-            GitHub 2023
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="https://github.com/Polchaninova">
+              <svg class="footer__logo-svg logo__git">
+                <use href="./image/sprite.svg#icon-github"></use>
+              </svg>
+            </a>
           </li>
         </ul>
+        <ul class="contact-list">
+          <li class="contact-list__item">
+            <a
+              class="contact-list__link"
+              href="mailto:polchaninovaolha089@gmail.com"
+            >
+              <svg class="contact-list__link__email-img" width="16" height="12">
+                <use href="./image/sprite.svg#icon-header-mail"></use>
+              </svg>
+              <span class="contact-list__name-link">Email:</span>
+              polchaninovaolha089@gmail.com</a
+            >
+          </li>
+          <li class="contact-list__item">
+            <a class="contact-list__link" href="https://www.linkedin.com/feed/">
+              <svg
+                class="contact-list__link__email-img"
+                width="20px"
+                height="20px"
+              >
+                <use href="./image/sprite.svg#icon-linkedin"></use>
+              </svg>
+              linkedin: linkedin</a
+            >
+          </li>
+          <li class="contact-list__item">
+            <a class="contact-list__link" href="https://discord.com/">
+              <svg class="contact-list__link__email-img" width="16" height="12">
+                <use href="./image/sprite.svg#icon-header-mail"></use>
+              </svg>
+              Discord:Discord</a
+            >
+          </li>
+        </ul>
+        <!-- <p class="footer_uk">Ukraine 2023</p> -->
       </div>
     </footer>
   </body>
 </html>
+<!--  -->

@@ -1,0 +1,7 @@
+.experience__link {
+  color: $color-primary-black;
+  &:hover,
+  &:focus {
+    color: $color-accept-tomato;
+  }
+}
