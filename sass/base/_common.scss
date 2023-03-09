@@ -14,6 +14,8 @@ h5,
 h6,
 p,
 ul,
+pre,
+ol,
 li {
   margin-top: 0;
   margin-bottom: 0;
@@ -21,8 +23,9 @@ li {
   padding-right: 0;
 }
 body {
-  font-family: $font-primary;
-  background-color: var(--primary-white-color);
+  font-family: $font-accept;
+  color: $color-primary-black;
+  background-color: $font-accept;
 }
 a {
   text-decoration: none;
@@ -36,4 +39,17 @@ img {
 .section {
   padding-top: 40px;
   padding-bottom: 40px;
+}
+.title {
+  font-family: $font-primary;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.8;
+  text-align: center;
+  color: #fe9013;
+}
+.description {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.8;
 }

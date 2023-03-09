@@ -14,7 +14,7 @@
         <nav class="nav">
           <ul class="nav-menu">
             <li class="nav-menu__item">
-              <a href="#about" class="nav-menu__link">About</a>
+              <a href="#about" class="nav-menu__link current">About</a>
             </li>
             <li class="nav-menu__item">
               <a href="#skills" class="nav-menu__link">Skills</a>
@@ -36,21 +36,24 @@
       <section class="section contact">
         <div class="container">
           <div class="contact-info">
-            <p class="contact-info__hi">Hi👋I am</p>
-            <p class="contact-info__first-name">Olga Polchaninova</p>
-            <p class="contact-info__first-name">Junior Frontend Developer</p>
+            <p class="contact-info__hi title">Hi👋I am</p>
+            <p class="contact-info__first-name title">Olga Polchaninova</p>
+            <p class="contact-info__position title">
+              Junior Frontend Developer
+            </p>
           </div>
           <article class="contact-box" id="contact">
-            <img
-              class="contact-box__photo"
-              src="./image/personal-photo.jpg"
-              alt="personal-photo"
-            />
+            <div class="wrapper">
+              <img
+                class="contact-box__photo"
+                src="./image/photo.jpg"
+                alt="personal-photo"
+              />
+            </div>
 
-            <h1 class="contact-box__title">Contact me</h1>
+            <h1 class="contact-box__title title">Contact me</h1>
             <ul class="contact-list">
               <li class="contact-list__item">
-                Email:
                 <a
                   class="contact-list__link"
                   href="mailto:polchaninovaolha089@gmail.com"
@@ -62,46 +65,192 @@
                   >
                     <use href="./image/sprite.svg#icon-header-mail"></use>
                   </svg>
+                  <span class="contact-list__name-link">Email:</span>
                   polchaninovaolha089@gmail.com</a
                 >
               </li>
               <li class="contact-list__item">
-                linkedin:
                 <a
                   class="contact-list__link"
                   href="https://www.linkedin.com/feed/"
-                  >linkedin</a
                 >
-                <svg
-                  class="contact-list__link__lk-img"
-                  width="20px"
-                  height="20px"
+                  <svg
+                    class="contact-list__link__email-img"
+                    width="20px"
+                    height="20px"
+                  >
+                    <use href="./image/sprite.svg#icon-linkedin"></use>
+                  </svg>
+                  linkedin: linkedin</a
                 >
-                  <use href="./image/sprite.svg#icon-linkedin"></use>
-                </svg>
               </li>
               <li class="contact-list__item">
-                Discord:
-                <a class="contact-list__link" href="https://discord.com/"
-                  >Discord</a
+                <a class="contact-list__link" href="https://discord.com/">
+                  <svg
+                    class="contact-list__link__email-img"
+                    width="16"
+                    height="12"
+                  >
+                    <use href="./image/sprite.svg#icon-header-mail"></use>
+                  </svg>
+                  Discord:Discord</a
                 >
               </li>
             </ul>
           </article>
         </div>
       </section>
-      <section class="about" id="about">
-        <h2 class="about__title">About me</h2>
-        <p class="about__description">
-          I am currently looking for new opportunities in front-end development.
-          I am open to remote work and a flexible schedule.I recently completed
-          the "front-end development" course at the "SheCodes" company. I
-          learned a fairly good knowledge base of HTML,Currently, I came to the
-          RS Schools Course «JavaScript/Front-end. Stage 1» to improve my
-          knowledge and get a job in the company EPAM. CSS, JS and React
-          languages.
-        </p>
+      <section class="about section" id="about">
+        <div class="container">
+          <h2 class="about__title title">About me</h2>
+          <p class="about__description description">
+            I am currently looking for new opportunities in front-end
+            development. I am open to remote work and a flexible schedule.I
+            recently completed the "front-end development" course at the
+            "SheCodes" company. I learned a fairly good knowledge base of
+            HTML,Currently, I came to the RS Schools Course
+            «JavaScript/Front-end. Stage 1» to improve my knowledge and get a
+            job in the company EPAM. CSS, JS and React languages.
+          </p>
+        </div>
+      </section>
+      <section class="skills section" id="skills">
+        <div class="container">
+          <h2 class="title">Skills</h2>
+          <ol>
+            <li class="skills-description description">HTML, Markdown, CSS</li>
+            <li class="skills-description description">VS Code</li>
+            <li class="skills-description description">API,GitHub</li>
+            <li class="skills-description description">Bootstrap,Hosting</li>
+            <li class="skills-description description">Responsive</li>
+            <li class="skills-description description">SEO, Flexbox</li>
+          </ol>
+        </div>
+      </section>
+      <section class="education section" id="education">
+        <div class="container">
+          <h2 class="education title" id="education">Courses</h2>
+          <ol>
+            <li class="skills-description description">
+              RS Schools Course «JavaScript/Front-end. Stage 1» (in progress)
+            </li>
+            <li class="skills-description description">
+              GoIT Course «HTML,CSS,JS/Front-end.» (in progress)
+            </li>
+            <li class="skills-description description">
+              SheCodes Course «HTML,CSS,JS/Front-end.» period from July 18, 2022
+              to 12 December, 2022 (completed)
+            </li>
+            <li class="skills-description description">
+              IT Marathon to the EPAM University Program (completed)
+            </li>
+            <li class="skills-description description">
+              English course
+              <a class="link-about" href="https://lingualeo.com/ru/profile/edit"
+                >Lingualeo.</a
+              >My goal is Advanced level (C1)(in process)
+            </li>
+          </ol>
+        </div>
+      </section>
+      <section class="coding">
+        <div class="container">
+          <h2 class="coding__title title">Project Weather App</h2>
+          <p class="coding__description description">
+            When a user searches for a city (example: Kharkiv), it should
+            display the name of the city on the result page and the current
+            temperature of the city
+          </p>
+          <pre class="coding">
+            <code>
+    function search(event) { 
+    event.preventDefault(); 
+    let cityElement = document.querySelector("#city"); 
+    let cityInput = document.querySelector("#city-input"); 
+    let cityName = cityInput.value; cityElement.innerHTML = cityName;
+
+    showWeatherForCity(cityName); 
+   } 
+    function showTemperature(response) {
+    let temperature = Math.round(response.data.main.temp); let city =
+    response.data.name; 
+    
+    let message = `Today in ${city}`; let h1 =
+    document.querySelector("h1"); 
+    h1.innerHTML = message;
+
+    let currentTempElement =
+    document.querySelector("#temperature"); 
+    currentTempElement.innerHTML= temperature;
+    } 
+    
+    function getWeatherForCity(cityName) { 
+    let apiKey = "b5fdbe7ffc620c1e309259a98257fdc7"; let units = "metric"; 
+     let apiUrl =
+    `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=${units}`;
+    return axios.get(apiUrl);
+    }
+                 
+</code>
+
+         </pre>
+          <section class="experience">
+            <h2 class="title">Experience:</h2>
+            <a href="http://momentums--papaya-tanuki-cdc4b7.netlify.app/"
+              >Project Momentum</a
+            >
+          </section>
+        </div>
+      </section>
+      <section class="languages section">
+        <div class="container">
+          <h2 class="languages__title title" id="languages">Languages</h2>
+          <ol>
+            <li class="languages__knowledge description">
+              English - A1 (Elementary)
+              <a
+                class="languages__link-en"
+                href="https://training.epam.ua/Inbox#!/Notifications?lang=ua"
+                >English level (in process)</a
+              >
+            </li>
+            <li class="languages__knowledge description">Ukrainian - Native</li>
+            <li class="languages__knowledge description">
+              Russian - Intermediate
+            </li>
+          </ol>
+        </div>
       </section>
     </main>
+    <footer class="footer">
+      <div class="container">
+        <a
+          class="footer__link-logo"
+          href="https://app.rs.school"
+          target="_blank"
+        >
+          <img
+            class="footer__logo-img"
+            src="./image/logo.jpg"
+            alt="logo"
+            width="26px"
+            height="26px"
+        /></a>
+        <ul>
+          <li>
+            <a class="footer__link" href="https://github.com/Polchaninova">
+              <svg class="footer__logo-svg">
+                <use
+                  href="./image/sprite.svg#icon-github"
+                  width="26px"
+                  height="26px"
+                ></use>
+              </svg>
+            </a>
+            GitHub 2023
+          </li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>
