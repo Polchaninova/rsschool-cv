@@ -1,12 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.min.css" />
+
     <title>CV</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="nav">
+          <ul class="nav-menu">
+            <li class="nav-menu__item">
+              <a href="#about" class="nav-menu__link">About</a>
+            </li>
+            <li class="nav-menu__item">
+              <a href="#skills" class="nav-menu__link">Skills</a>
+            </li>
+            <li class="nav-menu__item">
+              <a href="#education" class="nav-menu__link">Education</a>
+            </li>
+            <li class="nav-menu__item">
+              <a href="#languages" class="nav-menu__link">Languages</a>
+            </li>
+            <li class="nav-menu__item">
+              <a href="#contact" class="nav-menu__link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="section contact">
+        <div class="container">
+          <div class="contact-info">
+            <p class="contact-info__hi">Hi👋I am</p>
+            <p class="contact-info__first-name">Olga Polchaninova</p>
+            <p class="contact-info__first-name">Junior Frontend Developer</p>
+          </div>
+          <article class="contact-box" id="contact">
+            <img
+              class="contact-box__photo"
+              src="./image/personal-photo.jpg"
+              alt="personal-photo"
+            />
+
+            <h1 class="contact-box__title">Contact me</h1>
+            <ul class="contact-list">
+              <li class="contact-list__item">
+                Email:
+                <a
+                  class="contact-list__link"
+                  href="mailto:polchaninovaolha089@gmail.com"
+                >
+                  <svg
+                    class="contact-list__link__email-img"
+                    width="16"
+                    height="12"
+                  >
+                    <use href="./image/sprite.svg#icon-header-mail"></use>
+                  </svg>
+                  polchaninovaolha089@gmail.com</a
+                >
+              </li>
+              <li class="contact-list__item">
+                linkedin:
+                <a
+                  class="contact-list__link"
+                  href="https://www.linkedin.com/feed/"
+                  >linkedin</a
+                >
+                <svg
+                  class="contact-list__link__lk-img"
+                  width="20px"
+                  height="20px"
+                >
+                  <use href="./image/sprite.svg#icon-linkedin"></use>
+                </svg>
+              </li>
+              <li class="contact-list__item">
+                Discord:
+                <a class="contact-list__link" href="https://discord.com/"
+                  >Discord</a
+                >
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+      <section class="about" id="about">
+        <h2 class="about__title">About me</h2>
+        <p class="about__description">
+          I am currently looking for new opportunities in front-end development.
+          I am open to remote work and a flexible schedule.I recently completed
+          the "front-end development" course at the "SheCodes" company. I
+          learned a fairly good knowledge base of HTML,Currently, I came to the
+          RS Schools Course «JavaScript/Front-end. Stage 1» to improve my
+          knowledge and get a job in the company EPAM. CSS, JS and React
+          languages.
+        </p>
+      </section>
+    </main>
+  </body>
 </html>
